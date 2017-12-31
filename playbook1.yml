@@ -1,0 +1,11 @@
+---
+- hosts: clients
+  remote_user: ec2_user
+# become: yes
+# become_method: sudo
+  tasks:
+    - name: check if apache is running
+      service: name=httpd state=started
+  handlers:
+    - name: check the status of apache
+      service: name=httpd state=started 

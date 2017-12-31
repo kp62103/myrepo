@@ -1,0 +1,9 @@
+---
+- hosts: clients
+  remote_user: ec2_user
+  tasks:
+    - name: check the status of ping
+      ping: 
+  handlers:
+    - name: check the status of ping
+      ping: 
